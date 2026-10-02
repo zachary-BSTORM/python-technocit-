@@ -1,0 +1,24 @@
+# Conditions
+a = 5
+b = 10
+
+si a < b alors
+		print('message si vrai')
+	finsi
+
+si a < v alors
+		print('message si vrai')
+	sinon
+		print('message si faux')
+	finsi
+
+
+si a < b alors
+		print('message si vrai')
+	sinonsi a > b alors
+		print('message si condition 2 vrai')
+    sinonsi a == b alors
+		print('message si condition 3 vrai')
+	sinon
+		print("message si aucune condition au dessus n'est vrai")
+	finsi
