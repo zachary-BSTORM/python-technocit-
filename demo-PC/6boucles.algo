@@ -1,0 +1,10 @@
+# verification avant execution
+tantque 5 < 6 faire
+		print("Code à exécuter")
+	fintantque
+
+
+# execution avant la première vérification
+Répéter
+		print("Code à exécuter")
+	TantQue 5 < 6
