@@ -1,4 +1,3 @@
-from random import randint
 """
 exo13-À l’aide d’une boucle, afficher la table de multiplication par 2. 
 Ensuite, coder votre algorithme en Python.
