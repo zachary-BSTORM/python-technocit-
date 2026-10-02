@@ -1,0 +1,49 @@
+"""
+Réaliser un algorithme convertisseur de seconde. 
+Ce dernier reçoit un nombre de secondes et détermine 
+le nombre de jours, heures, minutes et secondes auquel elles correspondent.
+
+• Exemple :
+4561 secondes correspondent à 0 jour 1 heure 16 minutes et 1 seconde.
+
+• Réfléchissez à la méthode que nous devons utiliser.
+• Une fois l’algorithme réalisé, testez-le en Python.
+"""
+
+"""
+Convertisseur de secondes
+1 jour = 86400 secondes
+1 heure = 3600 secondes
+"""
+
+variable input_sec en Réel
+variable secondes en entier
+variable minutes en entier
+variable heures en entier
+variable jours en entier
+
+DEBUT
+	# Récupération de la valeur
+    Ecrire "Entrez un nombre de secondes :"
+    lire input_sec # 4561
+
+
+    # logique
+    secondes <- input_sec
+
+    jours <- secondes DIV 86400 
+    reste <- secondes MOD 86400
+
+    heures <- reste DIV 3600 
+    reste <- reste MOD 3600 
+
+    minutes <- reste DIV 60
+    secondes <- reste MOD 60
+
+    # Résultat
+    print(input_sec + "s , donne : " +  
+    jours + " jours , " + 
+    heures + " heures, " + 
+    minutes + " minutes, " + 
+    secondes + " secondes")
+FIN
