@@ -1,0 +1,27 @@
+# Déclarations
+
+variable nom_variable en type_variable
+
+
+# affectation
+
+nom_variable <- 5
+nom_variable <- lire()
+
+nom_variable = lire("Entrez vos informations")
+
+# opérateurs 
+
+= : égalité
+≠ : différence
+< : plus petit que 
+> : plus grand que 
+>= : plus grand ou égale
+<= : plus petit ou égale
+
+# comparaisons
+
+¬ : négation
+∧ : ET
+∨ : OU
+^ : XOR ( verifications exclusivité ) 

@@ -1,0 +1,5 @@
+variable nom_variable en type_variable
+
+nom_variable <- 5
+
+Ecrire(nom_variable)

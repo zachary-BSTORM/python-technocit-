@@ -1,0 +1,23 @@
+variable nom en chaine
+variable prenom en chaine
+variable age en entier
+
+Algorithme informations
+DEBUT
+	# Indiquer à l'utilisateur ce qu'il doit faire
+    ecrire('Entrez vos informations')
+
+    ecrire('Entrez votre nom')
+    lire(nom)
+
+    ecrire('Entrez votre prenom')
+    lire(nom)
+
+    ecrire('Entrez votre age')
+    lire(nom)
+
+
+    ecrire("Vous êtes " + nom + " - " + prenom + " vous avez " + age + " ans")
+
+FIN
+
