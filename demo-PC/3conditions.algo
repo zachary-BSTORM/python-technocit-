@@ -2,10 +2,12 @@
 a = 5
 b = 10
 
+// exemple si seul
 si a < b alors
 		print('message si vrai')
 	finsi
 
+// exemple si sinon avec un seul sinon
 si a < v alors
 		print('message si vrai')
 	sinon
@@ -13,6 +15,7 @@ si a < v alors
 	finsi
 
 
+// exemple Si SinonSi sinon : autant de sinonsi qur nécéssaire un seul sinon
 si a < b alors
 		print('message si vrai')
 	sinonsi a > b alors

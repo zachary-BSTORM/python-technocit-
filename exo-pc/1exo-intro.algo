@@ -4,7 +4,7 @@ variable age en entier
 
 Algorithme informations
 DEBUT
-	# Indiquer à l'utilisateur ce qu'il doit faire
+	// Indiquer à l'utilisateur ce qu'il doit faire
     ecrire('Entrez vos informations')
 
     ecrire('Entrez votre nom')

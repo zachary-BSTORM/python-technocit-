@@ -1,5 +1,8 @@
+// Déclarations de variable
 variable nom_variable en type_variable
 
+// affectation
 nom_variable <- 5
 
+// affichage
 Ecrire(nom_variable)

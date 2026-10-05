@@ -1,5 +1,7 @@
 
 def get_number(message : str):
+    a = 0
+    
     while True:
         input_user = input(f"Entrez un nombre pour {message}")
         try:

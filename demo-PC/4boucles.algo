@@ -1,4 +1,10 @@
 # verification avant execution
+
+// Le résultat de la condition doit renvoyer un booléen
+// on peut utiliser plusieurs conditions
+// attention au boucles infinies
+
+// exécution après avoir fait la vérification
 tantque 5 < 6 faire
 		print("Code à exécuter")
 	fintantque

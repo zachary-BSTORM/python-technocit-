@@ -1,0 +1,444 @@
+"""
+exo13-À l’aide d’une boucle, afficher la table de multiplication par 2. 
+Ensuite, coder votre algorithme en Python.
+- récupérer la table à afficher 
+- récupérer le nombre d'éléments à afficher
+"""
+
+table <- 2
+
+Pour i <- 1 à 10 Pas 1 Faire
+		Ecrire( i + " * " + table + " = " + i * table)
+	Suivant
+
+Ecrire("Entrez la table à afficher")
+table <- lire()
+
+Pour i <- 1 à 10 Pas 1 Faire
+    Ecrire("Entrez la table à afficher")
+    table <- lire()
+	Suivant
+
+
+"""
+exo14-Reprenez l’algorithme du lanceur de balles de tennis et
+faites en sorte qu’il lance une balle tant que le stock n’est pas vide.
+Il y a donc 2 variables stock_balles et pret , panier_vide
+
+- afficher à chaque balle lancé le nombre de balle restante
+- afficher un message lors de l'arret
+"""
+variables panier_vide en Booléen  <- Vrai
+variables joueur_pret en Booléen  <- Faux
+variables stock_balles en Entier <- 0
+
+variables input_user en Chaîne
+
+Ecrire("Etes vous prêt ? y - n")
+input_user <- lire()
+
+Si input_user == "y" Alors
+		joueur_pret = Vrai
+	FinSi
+Ecrire("Combien de balles avez-vous mis dans la machine ? : ")
+stock_balles = lire()
+
+si stock_balles > 0 alors
+		panier_vide <- Faux
+	finsi
+
+TantQue stock_balles > 0 ET joueur_pret == Vrai Faire
+		Ecrire('Balle lancé')
+        stock_balles -= 1
+	FinTantQue
+
+"""
+• exo15-À l’aide de deux boucles, 
+afficher les tables de multiplication de 1 à 9. 
+Ensuite, coder votre algorithme en Python.
+"""
+pour i <- 1 à 9 pas 1 faire
+    print("Table de : " + i)
+    pour j <- 1 à 10 pas 1 faire
+        Ecrire( i + " * " + j + " = " + i * j)
+    suivant
+suivant
+
+
+"""
+Jeu du plus ou moins
+
+Génération d'un nombre aléatoire 
+- from random import randint
+result = randint(1,10)
+
+dans une boucle 
+    - demander à l'utilisateur d'entrez une valeur
+    - afficher plus ou moins 
+    - compter le nombre coups
+    
+    - afficher un message lorsqu'il à trouvez le nombre avec le nombre de coups
+"""
+variables mystery_number en Entier <- 0
+variables input_user en Entier <- 0
+variables victory en Booléen <- Faux
+
+
+TantQue Non(victory) Faire
+		Ecrire("Devinez le nombre mystère :")
+        input_user <- lire()
+
+        Si input_user < mystery_number Alors
+            print("Le nombre est plus grand")
+            SinonSi input_user > mystery_number:
+                print("Le nombre est plus petit")
+                Sinon:
+                    victory <- Vrai
+                    print("Bravo le nombre était :" + mystery_number)
+        FinSi
+
+	FinTantQue
+
+
+
+
+
+
+"""
+exo17-À l’aide d’une boucle TantQue … Faire, améliorez l’algorithme du distributeur
+de boissons pour qu’il demande au client s’il désire une autre boisson (Tant qu’il en a
+envie).
+"""
+stock_coca <- 5
+stock_fanta <- 5
+stock_eau <- 5
+stock_cafe <- 5
+
+choix <- 0
+continue_loop <- Vrai
+
+TantQue continue_loop Faire
+		Ecrire("coca : 1")
+		Ecrire("fanta : 2")
+		Ecrire("eau : 3")
+		Ecrire("café : 4")
+		Ecrire("stop : 0")
+
+        choix <- lire()
+
+        SelonQue choix :
+            CAS "1":
+                si stock_coca > 0 alors
+                    Ecrire("Voici votre coca")
+                    stock_coca -= 1
+                sinon
+                    Ecrire("Cette boisson n'est pas disponible")
+                finsi
+            CAS "2":
+                si stock_fanta > 0 alors
+                    Ecrire("Voici votre fanta")
+                    stock_fanta -= 1
+                sinon
+                    Ecrire("Cette boisson n'est pas disponible")
+                finsi
+            CAS "3":
+                si stock_eau > 0 alors
+                    Ecrire("Voici votre eau")
+                    stock_eau -= 1
+                sinon
+                    Ecrire("Cette boisson n'est pas disponible")
+                finsi
+            CAS "4":
+                si stock_cafe > 0 alors
+                    Ecrire("Voici votre café")
+                    stock_cafe -= 1
+                sinon
+                    Ecrire("Cette boisson n'est pas disponible")
+                finsi
+            CAS "5":
+                continue_loop <- Faux
+                Ecrire("Merci au revoir")
+
+	FinTantQue
+
+
+
+"""
+• exo18-À l’aide d’une boucle TantQue … Faire, améliorez l’algorithme de la
+calculatrice afin qu’elle demande à l’utilisateur s’il veut faire un autre calcul (tant
+qu’il le désire).
+"""
+variable nb_1 en Entier
+variable operateur en Chaîne
+variable nb_2 en Entier
+variable input_user en Chaîne
+
+continue_loop = Vrai
+
+TantQue continue_loop Faire
+		Ecrire("Entrez le premier nombre : ")
+        nb_1 <- lire()
+
+        Ecrire("Entrez l'opérateur")
+        operateur <- lire()
+
+        Ecrire("Entrez le deuxième nombre : ")
+        nb_2 <- lire()
+
+        SelonQue operateur Faire
+            cas "+":
+                Ecrire(nb_1 + " + " + nb_2 + " = " + nb_1 + nb_2)
+            cas "-":
+                Ecrire(nb_1 + " - " + nb_2 + " = " + nb_1 - nb_2)
+            cas "*":
+                Ecrire(nb_1 + " * " + nb_2 + " = " + nb_1 * nb_2)
+            cas "/":
+                si nb_2 == 0 alors
+                    Ecrire("La division par zéro n'est pas possible")
+                sinon
+                    Ecrire(nb_1 + " / " + nb_2 + " = " + nb_1 / nb_2)
+                finsi
+
+        Ecrire("Voulez vous refaire un calcul ? y - n")
+        input_user <- Lire()
+
+        si input_user == "n" alors
+		    continue_loop <- Faux
+	    finsi
+	FinTantQue
+
+
+"""
+• exo19-À l’aide de la boucle TantQue … Faire, réalisez un algorithme calculant le
+résultat de N10. N étant un nombre saisi par l’utilisateur.
+"""
+n <- 0
+resultat <- 1
+compteur <- 0
+
+n <- lire()
+
+TantQue compteur < 10 Faire
+		resultat <- resultat * n
+        compteur += 1
+	FinTantQue
+
+Ecrire(n + "^10 = " + resultat)
+
+"""
+• exo20-Reprenez l’exercice précédent et modifiez-le pour que l’utilisateur entre
+également l’exposant qu’il désire calculer.
+"""
+n <- 0
+resultat <- 1
+compteur <- 0
+exposant <- 10
+
+n <- lire()
+exposant <- lire()
+
+TantQue compteur < exposant Faire
+		resultat <- resultat * n
+        compteur += 1
+	FinTantQue
+
+Ecrire(n + "^"+ exposant + " = " + resultat)
+
+"""
+• exo21-Améliorez le "Cest plus, c'est moins, c'est gagné" pour qu'il tourne en boucle tant que le juste_prix n'a pas été trouvé.
+L ordinateur choisit un nombre aléatoirement entre 1 et 100. L'utilisateur est invité à entrer un nombre et l'algorithme nous
+répond "C'est plus" ou "C'est moins". Lorsqu'on a trouvé le bon nombre, l'algorithme affiche le nombre de tentatives
+effectuées pour trouver le résultat
+"""
+
+
+
+"""
+Exercices supplémentaires:
+• 1) Réalisez un système de connexion à l'aide d'un mot de passe. 
+L'algorithme demande à l'utilisateur de saisir son mot de passe. 
+Si ce dernier valide de bon mot de passe, on le salue. 
+Par contre, si il fait une erreur trois fois de suite, 
+un message lui signalera que son compte est bloqué et il ne pourra pas réessayer une quatrième fois
+"""
+variable correct_password en Chaîne
+variable correct_email en Chaîne
+variable tentatives en Entier <- 0
+
+variable input_email en Chaîne
+variable input_password en Chaîne
+
+variable isLogged en Booléen <- Faux
+
+TantQue NON(isLogged) OU tentatives < 4 Faire
+		Ecrire("Entrez votre email :")
+        input_email <- lire()
+
+        Ecrire("Entrez votre mot de passe")
+        input_password <- lire
+
+        tentatives += 1
+
+        si input_password == correct_password ET input_email == correct_email alors
+		    isLogged <- Vrai
+        sinon
+            Ecrire("Les informations de connection sont incorrectes !")
+        finsi
+
+	FinTantQue
+
+si isLogged alors
+		Ecrire("Bienvenue " + input_email)
+	sinon
+		Ecrire("Votre compte est bloqué")
+	finsi
+
+
+
+"""
+• 2) Réalisez un algorithme qui demande un nombre à l utilisateur et affiche autant de ligne 
+que le nombre spécifié par l utilisateur.
+Exemple : l utilisateur a rentré le nombre 5 et l algorithme affiche :
+*
+**
+***
+****
+*****
+"""
+nombre <- 0
+
+nombre <- lire()
+
+pour i <- 1 à nombre pas 1 faire
+		Ecrire("*" * nombre)
+	suivant
+
+
+"""
+• 3) Ecrire un algorithme qui demande à l’utilisateur de taper 10 entiers et qui affiche le plus petit de ces entiers.
+
+"""
+nombre  <- 0
+min <- 0
+
+nombre <- lire()
+min <- nombre
+
+pour i <- 2 à 10 pas 1 faire
+		nombre <- lire()
+        si nombre < min alors
+            min <- nombre
+        finsi
+	suivant
+print("Le plus petit nombre est " + min)
+
+
+"""
+• 4) Algorithme demandant 3 nombres : nbRep, nbTiret, nbEspace. Ce dernier affiche à l écran autant de tiret que la valeur de
+nbTiret, suivi d autant d espace que la valeur de nbEspace. Le tout autant de fois que la valeur de nbRep.Exemple : si nbRep
+= 2, nbTiret = 1 et nbEspace = 3 le résultat est le suivant :|- - |
+"""
+nb_rep <- 0
+nb_tiret <- 0
+nb_espace <- 0
+ligne_result <- ""
+
+nb_rep <- lire()
+nb_tiret <- lire()
+nb_espace <- lire()
+
+pour i <- 1 à nb_rep pas 1 faire
+		pour t <- 1 à nb_tiret pas 1 faire
+		    ligne <- ligne + "-"
+	    suivant
+        pour e <- 1 à nb_espace pas 1 faire
+		    ligne <- ligne + " "
+	suivant
+	suivant
+
+Ecrire(ligne)
+"""
+Projet : juste_prix
+• Améliorez encore le juste_prix : l utilisateur a droit à 10 essais après ces 10
+essais, il a perdu.
+• L ordinateur affiche le juste_prix
+• Ajouter un niveau :
+– facile : entre 1 et 10
+– moyen : entre 1 et 100
+– difficile : entre 1 et 1000
+• Tant que la personne veut rejouer, redemandez le niveau et générez un
+nombre.
+• Vérifiez que tout caractère entré est correct, c est-à-dire pour que le
+programme ne plante jamais.
+
+
+Indices
+• Pour générer un nombre entre 0 et 10, il faut 2
+choses :
+– import random
+– juste_prix = random.randrange(0, 11, 1)
+• Pour effacer l écran, il faut 2 choses :
+– import os
+– os.system('cls')
+
+Indices
+• Pour vérifier qu une chaine de caractères est
+un nombre :
+– chaine = "4"
+– if chaine.isdigit() :
+print("C est un nombre")
+else :
+print("Ce n est pas un nombre")
+"""
+
+variable continue_game en Booléen
+variable input_user en chaine
+variable life en Entier <- 10
+variable price_user en Entier
+
+TantQue continue_game Faire
+
+    Ecrire("Niveau 1 : 1 - 10")
+    Ecrire("Niveau 2 : 1 - 100")
+    Ecrire("Niveau 3 : 1 - 1000")
+
+    input_user <- lire()
+
+    SelonQue input_user Faire
+        case "1":
+            mystery_price = random(1,10)
+        case "2":
+            mystery_price = random(1,100)
+        case "3":
+            mystery_price = random(1,1000)
+     
+    SelonQue input_user Faire
+        case "1":
+            Ecrire("LE prix est entre 1 et 10")
+        case "2":
+            Ecrire("LE prix est entre 1 et 100")
+        case "3":
+            Ecrire("LE prix est entre 1 et 1000")
+
+    TantQue life > 0 Faire
+		
+                price_user <- lire()
+                life <- life - 1
+                si price_user < mystery_price alors
+                    Ecrire("Le prix est plus grand")
+                sinonsi price_user > mystery_price alors
+                    Ecrire("Le prix est plus petit")
+                sinon
+                    Ecrire("Félicitation le prix était " + mystery_price)
+                    Ecrire("Il vous reste " + life + "vies")
+                    life <- 0
+                finsi
+
+	FinTantQue
+
+    Ecrire("Voulez vous recommencer ? y - n ")
+    input_user = lire()
+    Si input_user == "n" Faire
+        continue_game <- Faux
+
+FinTantQue
