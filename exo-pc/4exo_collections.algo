@@ -1,23 +1,98 @@
 """
-exo23-Écrire un algorithme demandant à l’utilisateur le nombre de joueurs (max 10
-joueurs). Ensuite, l’algorithme doit demander à l’utilisateur le score de chaque
-joueur. Une fois ceci fini, il faut afficher la moyenne des scores. Faites de même en
-Python
+exo23-Écrire un algorithme demandant à l’utilisateur le nombre de joueurs (max 10 joueurs). 
+Ensuite, l’algorithme doit demander à l’utilisateur le score de chaque joueur. 
+Une fois ceci fini, il faut afficher la moyenne des scores. Faites de même en Python
 """
+variable nb_joueurs en Entier <- 0
+variable score en tableau de Entier
+variable total en Entier
 
+Début
+    TantQue 0 > nb_joueurs > 10 Faire
+		Ecrire("Entrez le nombre de joueurs , entre 1 et 10")
+        nb_joueurs <- lire()
+        FinTantQue
+
+    Pour i <- 0 à nb_joueurs Pas 1 Faire
+		Ecrire("Entrez le score du joueur " + i + 1)
+        result = lire()
+        score.ajout(result)
+	Suivant
+
+    Pour i <- 0 à nb_joueurs - 1 Pas 1 Faire
+		total <- total + score[i]
+	Suivant
+
+    Ecrire("La moyenne est de " + total / nb_joueurs)
+
+Fin
 
 """
-• exo24-Inverser un tableau : soit un tableau T. Saisir ce tableau. Changer de place les
-éléments de ce tableau de façon à ce que le nouveau tableau soit une sorte de miroir
-de l'ancien et afficher le nouveau tableau.
+• exo24-Inverser un tableau : soit un tableau T. 
+Saisir ce tableau. 
+Changer de place les éléments de ce tableau de façon à ce que le nouveau tableau 
+soit une sorte de miroir de l'ancien et afficher le nouveau tableau.
 """
+variable tab_ordered en tableau de Entier[10]
+variable tab_reversed en tableau de Entier[10]
+variable index_reverse en Entier <- 0
+
+Début
+	Pour i <- 0 à 9 Pas 1 Faire
+		Ecrire("Entrez une valeur")
+        valeur = lire()
+        tab_ordered[i] <- valeur
+	Suivant
+
+    Pour i <- 9 à 0 Pas -1 Faire
+		tab_reversed[index_reverse] <- tab_ordered[i]
+        index_reverse = index_reverse + 1
+	Suivant
+
+    Pour i <- 0 à 9 Pas 1 Faire
+		Ecrire(tab_reversed[i])
+	Suivant
+Fin
 
 
 """
 • exo25-À l’aide des boucles, réalisez un algorithme permettant de trier un tableau
 d’entiers dans l’ordre croissant. Mettez-le ensuite en pratique avec le Python.
 """
+Constante TAILLE en Entier <- 10
+variable tab en tableau de Entier[TAILLE]
 
+Début
+	Fonction quick_sort(tab en tableau de entiers) Retourne tableau
+	
+    Si Taille(tab) <= 1 Alors
+		Retourne tab
+	FinSi
+
+    variable pivot en Entier <- tab[Taille - 1]
+    variable petit en tableau Entier[Taille]
+    variable index_petit en Entier <- 0
+    variable grand en tableau Entier[Taille]
+    variable index_grand en Entier <- 0
+
+    Pour i <- 0 à Taille - 1  Pas 1 Faire
+		Si tab[i] < pivot Alors
+		    petit[index_petit] <- tab[i]
+            index_petit = index_petit + 1
+        Sinon
+            grand[index_grand] <- tab[i]
+            index_grand = index_grand + 1
+        FinSi
+
+        Retourne quick_sort(petit) + pivot + quick_sort(grand)
+	Suivant
+
+
+
+
+	Renvoyer valeur_de_retour
+    FinFonction
+Fin
 
 """
 exo26-En considérant deux tableaux d'entiers (non triés), réalisez un algorithme qui
@@ -25,6 +100,31 @@ place tous les éléments des deux tableaux dans un troisième. Ce dernier doit 
 trié une fois l'algorithme terminé. Notez que le tri doit être fait en même temps que
 la fusion des deux tableaux et pas après. (Indice : tab.reverse())
 """
+variable tab_1 en tableau de Entier[5]
+variable tab_2 en tableau de Entier[5]
+variable tab_fusion en tableau de Entier[10]
+
+
+TantQue longueur(tab_1) OU longueur(tab_2) Faire
+	
+        Si longueur(tab_1) = 0 Alors
+            plus_grand <- Maximum(tab_2)
+            Supprimer(tab_2,plus_grand)
+        SinonSi longueur(tab_2) = 0 Alors
+            plus_grand <- Maximum(tab_1)
+            Supprimer(tab_1,plus_grand)
+        SinonSi Maximum(tab_1) > Maximum(tab_2) Alors
+		    plus_grand <- Maximum(tab_1)
+            Supprimer(tab_1,plus_grand)
+        Sinon
+            plus_grand <- Maximum(tab_2)
+            Supprimer(tab_2,plus_grand)
+        FinSi
+    
+    tab_fusion.ajout(plus_grand)
+
+    FinTantQue
+    tab_fusion = Inversion(tab_fusion)
 
 
 """
