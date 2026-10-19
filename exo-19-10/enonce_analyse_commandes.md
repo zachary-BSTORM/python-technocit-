@@ -1,7 +1,19 @@
 
+
 Une petite entreprise te transmet un export de son logiciel de gestion : ses **clients**, ses **produits** et ses **commandes**. La direction veut des réponses à plusieurs questions : combien vend-on ? qui sont nos meilleurs clients ? y a-t-il des erreurs dans nos données ?
 
 Ta mission : écrire un programme Python qui lit ces fichiers et répond à ces questions, palier par palier.
+
+
+---
+
+## Règles du jeu
+
+- Travail **individuel**, dans **un seul fichier** : `analyse.py`.
+- Uniquement la **bibliothèque standard** de Python (pas de `pandas`).
+- Ton code doit être **découpé en fonctions** : une fonction = une tâche. Pas de gros bloc de code de 200 lignes.
+- Chaque fonction commence par un **commentaire** qui explique sa logique en une ou deux phrases.
+- Les paliers sont **progressifs** : termine un palier avant de passer au suivant. Personne n'est censé tout finir, va le plus loin possible.
 
 ---
 
@@ -39,7 +51,7 @@ Les trois fichiers sont au format CSV : séparateur virgule, encodage UTF-8, pre
 | `date` | Date au format `AAAA-MM-JJ` | `2026-03-14` |
 | `etat` | `brouillon`, `confirmee` ou `annulee` | `confirmee` |
 
->  Une commande ne contient qu'**un seul produit**. Les fichiers sont **liés par leurs identifiants** : `client_id` et `produit_id` désignent une ligne d'un autre fichier.
+> 💡 Une commande ne contient qu'**un seul produit**. Les fichiers sont **liés par leurs identifiants** : `client_id` et `produit_id` désignent une ligne d'un autre fichier.
 
 ---
 
@@ -83,8 +95,9 @@ C'est une technique essentielle : retiens-la, tu la réutiliseras partout.
 
 ---
 
-## Palier 5 : regrouper 
+## Palier 5 : regrouper ⏱️ *mode examen*
 
+> **Mode examen** : 30 minutes maximum. Avant d'écrire la moindre ligne de code, écris ta **logique en commentaires** (en français, étape par étape). Le formateur regardera d'abord tes commentaires, ensuite ton code.
 
 1. Calcule le **chiffre d'affaires par client** (uniquement les commandes confirmées).
 2. Calcule le **chiffre d'affaires par catégorie de produit**.
@@ -104,8 +117,9 @@ C'est une technique essentielle : retiens-la, tu la réutiliseras partout.
 
 ---
 
-## Palier 7 : détecter les anomalies 
+## Palier 7 : détecter les anomalies ⏱️ *mode examen*
 
+> Même règle : 30 minutes, logique en commentaires d'abord.
 
 Écris une fonction qui produit une **liste des anomalies** trouvées dans les données, par exemple :
 
@@ -134,3 +148,30 @@ Chaque anomalie est affichée avec le fichier, l'identifiant concerné et la rai
 2. Ajoute un **menu** en ligne de commande (`while True` + `input()`) pour choisir quelle analyse afficher.
 
 **Indice** : `csv.DictWriter`.
+
+---
+
+## Déroulé de la journée
+
+| Moment | Activité |
+|---|---|
+| Début de matinée | Présentation du sujet et des fichiers |
+| Matinée | Paliers 1 à 4 |
+| Fin de matinée | Point collectif : difficultés rencontrées |
+| Début d'après-midi | Paliers 5 et 6 |
+| Milieu d'après-midi | Palier 7, puis palier 8 pour les plus rapides |
+| Fin de journée | Relecture croisée (30 min) puis démo de 2 ou 3 volontaires |
+
+**Relecture croisée** : tu lis le code de ton voisin et tu lui donnes **une chose bien faite** et **une chose à améliorer**.
+
+---
+
+## Ce qui sera regardé
+
+Comme lors d'un test technique, la **logique** compte plus que la syntaxe :
+
+- Ta démarche est-elle claire et expliquée ?
+- Ton programme résiste-t-il aux **cas limites** (valeur vide, mauvais type, référence introuvable) ?
+- Ton code est-il découpé en fonctions qui font chacune **une seule chose** ?
+- Tes noms de variables et de fonctions sont-ils **compréhensibles** ?
+
