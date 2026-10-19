@@ -1,9 +1,9 @@
 
-my_list = {1:{"name":"John","age":30},2 : {"name":"Jane","age":30}}
+from file import test_action
 
-# print(my_dict)
 
-for k,v in my_list.items():
-    print(f" k : {k} - name : {v.get("name")} - age : {v["age"]}")
-    
-dict.fromkeys((), value)
+print(__name__)
+
+if __name__ == "__main__":
+
+test_action()
