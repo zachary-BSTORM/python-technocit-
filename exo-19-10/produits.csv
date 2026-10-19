@@ -1,0 +1,13 @@
+id,nom,categorie,prix_unitaire,stock
+1,Chaise de bureau,Mobilier,149.90,20
+2,Bureau assis-debout,Mobilier,489.00,5
+3,Lampe LED,Éclairage,34.50,40
+4,Écran 27 pouces,Informatique,259.99,10
+5,Clavier sans fil,Informatique,49.90,30
+6,Souris ergonomique,Informatique,39.00,25
+7,Armoire métallique,Mobilier,320.00,3
+8,Tableau blanc,Fournitures,89.00,8
+9,Ramette papier A4,Fournitures,5.50,200
+10,Casque audio,Informatique,79.90,12
+11,Lampadaire,Éclairage,,6
+12,Station d'accueil,Informatique,189.00,4

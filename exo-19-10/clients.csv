@@ -1,0 +1,17 @@
+id,nom,ville,type
+1,Dupont SPRL,Namur,entreprise
+2,Marie Lambert,Liège,particulier
+3,Bureautique Plus SA,Namur,entreprise
+4,Jean Peeters,Bruxelles,particulier
+5,"Martin, Fils & Cie",Charleroi,entreprise
+6,Sophie Dubois,Namur,particulier
+7,Techno Wavre SRL,Wavre,entreprise
+8,Lucas Janssens,Liège,particulier
+9,Atelier Mosan,Namur,entreprise
+10,Emma Leroy,Mons,particulier
+11,Imprimerie Hainaut,Mons,entreprise
+12,Thomas Renard,Bruxelles,particulier
+13,Café du Centre,Liège,entreprise
+14,Julie Martens,,particulier
+15,Nicolas Simon,Charleroi,particulier
+9,Atelier Meuse,Dinant,entreprise
